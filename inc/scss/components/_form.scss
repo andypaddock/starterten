@@ -1,0 +1,103 @@
+.contact-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  i {
+    padding-right: 1rem;
+  }
+  p {
+    padding: 2rem 0;
+  }
+}
+/* 
+** Contact Form 7 Styles 
+*/
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="url"],
+.wpcf7-form input[type="password"],
+.wpcf7-form input[type="search"],
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+  color: $color-white;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 0.5rem;
+  border: 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+.wpcf7-form ::-webkit-input-placeholder {
+  color: $color-white;
+  opacity: 1;
+}
+.wpcf7-form p {
+  margin: 0 0 28px;
+}
+.wpcf7-text:focus,
+.wpcf7-textarea:focus {
+  outline: 1px solid rgba(84, 222, 197, 0.9);
+  outline-offset: 0;
+}
+div.wpcf7-mail-sent-ok {
+  border: 0;
+  background: #5471de;
+  color: #fff;
+  padding: 18px;
+}
+div.wpcf7-acceptance-missing,
+div.wpcf7-validation-errors {
+  border: 0;
+  background: #f9443b;
+  color: #fff;
+  padding: 18px;
+}
+span.wpcf7-not-valid-tip {
+  color: #f9443b;
+}
+/* 
+** Button Styles 
+*/
+.wpcf7-form .button {
+  background-color: $color-primary;
+  border: 0;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 20px 42px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.wpcf7-form .button:hover {
+  cursor: pointer;
+  box-shadow: 0px 7px 16px -7px rgba(0, 0, 0, 0.4);
+  border: 0;
+}
+
+.mc4wp-form-fields {
+  padding: 2rem 0;
+  input {
+    color: white;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-right: 0.5rem;
+  }
+  input[type="submit"] {
+    background: $color-primary;
+    text-transform: uppercase;
+  }
+}
+.mc4wp-form ::-webkit-input-placeholder {
+  color: $color-white;
+  opacity: 1;
+}

@@ -1,0 +1,62 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+.u-margin-bottom {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.link-arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid $color-white;
+  border-right: 2px solid $color-white;
+}
+
+.arrow-top {
+  transform: rotate(-45deg);
+}
+.arrow-right {
+  transform: rotate(45deg);
+}
+.arrow-bottom {
+  transform: rotate(135deg);
+}
+.arrow-left {
+  transform: rotate(-135deg);
+}
+
+.equal-pad {
+  padding: 2rem 0;
+}
+
+@for $i from 1 through 10 {
+  $base: 10;
+  $offset: $base * $i;
+  .imageoff-#{$offset} {
+    background-position: $offset + 0% top !important;
+  }
+}

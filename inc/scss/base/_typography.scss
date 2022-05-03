@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap");
+
+body {
+  font-family: $default-font-family;
+  font-weight: 200;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-black;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  line-height: 1.2;
+  &.alt-color {
+    color: $color-white;
+  }
+  &--main {
+    display: block;
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 2.5rem;
+    }
+    /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      padding: 0 1rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+  line-height: 1.1;
+  &.alt-color {
+    color: $color-white;
+  }
+  &--sub {
+    display: block;
+    font-size: 2.7rem;
+    font-weight: 400;
+    // letter-spacing: 0.5rem;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      padding: 0 1rem;
+    }
+  }
+  &--main {
+    font-size: 5rem;
+  }
+  &--tertiary {
+    font-size: 1.5rem;
+  }
+  &--meta {
+    font-size: 1.5rem;
+    font-family: $alt-font-family;
+  }
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  &.light {
+    font-weight: 200;
+  }
+}
+.heading-highlight {
+  color: $color-primary;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.paragraph,
+p,
+ul {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+blockquote {
+  // font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  font-style: italic;
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+.alt-color {
+  color: $color-white;
+}
+.alt-font-pop {
+  font-family: $alt-font-family;
+}

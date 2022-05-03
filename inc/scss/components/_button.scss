@@ -1,0 +1,67 @@
+.button {
+  display: block;
+  background: $color-white;
+  color: $color-black;
+  text-align: center;
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 200;
+  margin: 1rem 0;
+  position: relative;
+  font-family: $alt-font-family;
+  i {
+    position: absolute;
+    right: 2rem;
+    bottom: 50%;
+    transform: translate(0, 50%);
+  }
+
+  &.outline {
+    background: none;
+    border: 1px solid $color-white;
+    font-family: $alt-font-family;
+    color: $color-white;
+    &.light {
+      color: $color-white;
+      border: 1px solid $color-white;
+    }
+  }
+  &.textonly {
+    background: none;
+    color: $color-white;
+    text-transform: none;
+    font-family: $alt-font-family;
+    padding: 1rem 0;
+  }
+  &.page-navbar {
+    padding: 1rem 1rem 1rem 4rem;
+    text-align: left;
+    background: $color-white;
+    color: $color-black;
+    i {
+      left: 1rem;
+      right: unset;
+    }
+    &.active {
+      font-weight: 700;
+    }
+  }
+}
+.slash {
+  color: $color-primary;
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+}
+.draw-border {
+  @include btn-border-drawing(
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 1),
+    1px,
+    bottom,
+    right
+  );
+}

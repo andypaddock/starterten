@@ -1,0 +1,222 @@
+.testimonial-slider {
+  text-align: center;
+  .quote {
+    .centre-line {
+      display: flex;
+      div {
+        flex: 1;
+      }
+    }
+    .line {
+      border-right: 1px solid $color-white;
+      height: 2rem;
+      margin: 2rem 0;
+    }
+  }
+  .copy {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 2rem 0;
+    p {
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+    @include respond(phone) {
+      -webkit-line-clamp: 10;
+    }
+  }
+  .quote-cite {
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .button {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 5rem 0;
+    display: unset;
+    background: none;
+    &:hover {
+      &:after {
+        content: "→";
+        transition: all ease 0.5s;
+        opacity: 1;
+        left: 8px;
+      }
+    }
+
+    &:after {
+      content: "→";
+      transition: all ease 0.5s;
+      position: relative;
+      opacity: 0;
+      left: -12px;
+    }
+  }
+}
+.testimonial-block {
+  .controls {
+    padding: 5rem 0;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      cursor: pointer;
+      color: $color-primary;
+      font-weight: 700;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      li {
+        &:first-of-type {
+          font-weight: 200;
+          cursor: none;
+        }
+      }
+    }
+  }
+  .testimonial-grid {
+    .mix {
+      .test-image {
+        border: 1px solid $color-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25rem;
+        @include backgroundCover;
+      }
+      svg {
+        position: absolute;
+        path {
+          fill: $color-white;
+        }
+      }
+      i {
+        font-size: 4rem;
+        color: $color-white;
+      }
+      .heading-highlight {
+        padding: 2rem 0 0;
+      }
+      .quote-position {
+        text-align: center;
+        margin: 0;
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  video {
+    width: 100%;
+  }
+  .popup__content {
+    .quote-cite,
+    .heading-secondary {
+      color: $color-primary;
+      text-align: center;
+      display: block;
+    }
+  }
+  blockquote {
+    p {
+      font-size: 2.5rem;
+    }
+    padding: 3rem;
+  }
+  .popup__left {
+    blockquote p {
+      font-size: 2rem;
+    }
+  }
+}
+.single-testimonial {
+  .centre-line {
+    display: flex;
+    div {
+      flex: 1;
+    }
+  }
+  .line {
+    border-right: 1px solid $color-white;
+    height: 2rem;
+    margin: 2rem 0;
+  }
+  .internal-video {
+    text-align: center;
+    position: relative;
+    video {
+      width: 100%;
+    }
+    span {
+      @include absCenter;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.3rem;
+      width: 100%;
+      &.visible {
+        animation: quote-fade 3s 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+      }
+      cite {
+        display: block;
+        color: $color-primary;
+      }
+    }
+  }
+  .quote {
+    text-align: center;
+    .copy {
+      color: $color-primary;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .quote-cite {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 0.3rem;
+    }
+    .quote-position {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+.testimonial {
+  text-align: center;
+  .quote {
+    padding: 4rem 0;
+    .quote-cite {
+      padding-top: 4rem;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        border-right: 1px solid $color-primary;
+        height: 1.75rem;
+        z-index: 1;
+        top: 1rem;
+        transform: rotate(90deg);
+      }
+    }
+    .mark {
+      color: $color-white;
+      font-family: $default-font-heading;
+      font-size: 6rem;
+      line-height: 0.3;
+    }
+  }
+}

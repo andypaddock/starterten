@@ -1,0 +1,132 @@
+.tabbed-section {
+  &__head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    text-transform: uppercase;
+
+    &--tab {
+      position: relative;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      background: $color-secondary-dark;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      h3 i {
+        padding-right: 2rem;
+      }
+
+      &:before {
+        @include psuedoElement;
+        bottom: -1rem;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: $color-secondary-dark;
+        opacity: 0;
+      }
+
+      &.active {
+        background: $color-secondary-dark;
+        border-radius: 0.5rem 0.5rem 0 0;
+        color: $color-primary;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    margin-top: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+
+    &--item {
+      display: none;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: min-content;
+      padding: 3rem 2rem;
+      grid-gap: 3rem 2rem;
+      background: $color-secondary-dark;
+      &.boxed {
+        background: none;
+      }
+
+      &.visible {
+        display: grid;
+        @include respond(tab-port) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .head {
+        grid-column: 2 / 3;
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+    }
+  }
+  .content-title {
+    h2 {
+      border: 1px solid $color-primary;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      color: $color-primary;
+    }
+  }
+  .content-text {
+    border: 1px solid $color-primary;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    .button {
+      display: block;
+      background: $color-primary;
+      color: $color-white;
+      text-align: center;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      &:hover {
+        &:after {
+          content: "→";
+          transition: all ease 0.5s;
+          opacity: 1;
+          left: 8px;
+        }
+      }
+
+      &:after {
+        content: "→";
+        transition: all ease 0.5s;
+        position: relative;
+        opacity: 0;
+        left: -12px;
+      }
+    }
+    ul {
+      padding-left: 1rem;
+      li {
+        padding: 0.5rem 1rem;
+        &::marker {
+          content: "\2022";
+          color: $color-primary;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+        }
+      }
+    }
+  }
+}

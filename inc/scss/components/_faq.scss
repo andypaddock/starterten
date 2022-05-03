@@ -1,0 +1,131 @@
+.toggle-block {
+  label {
+    position: relative;
+    margin-bottom: 0;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    span {
+      color: $color-white;
+    }
+
+    .heading {
+      margin-bottom: 0;
+      font-size: 1.75rem;
+      color: $color-primary;
+      font-weight: 300;
+      .highlight-letter {
+        text-transform: uppercase;
+        padding-right: 2rem;
+        font-weight: initial;
+      }
+    }
+    i {
+      position: absolute;
+      right: 2em;
+      top: 1.25em;
+      font-size: 1em;
+      margin-right: 0.5em;
+      transition: $fastEffect;
+    }
+
+    &.collapsed i {
+      transform: rotate(90deg);
+    }
+  }
+  ul {
+    list-style-position: outside;
+    li {
+      &::marker {
+        color: $color-primary-dark;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+    padding: 1rem 2rem;
+  }
+}
+
+.block__item {
+  margin-bottom: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+  background: $color-white;
+}
+.block__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+
+  font-weight: bold;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  .heading {
+    margin-bottom: 0;
+    font-size: 1.65rem;
+    color: $color-primary;
+    font-weight: 400;
+    text-transform: initial;
+    padding-right: 4rem;
+    .highlight-letter {
+      text-transform: uppercase;
+      padding-right: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.block__title::before,
+.block__title::after {
+  content: "";
+  width: 16px;
+  height: 2px;
+  background-color: $color-black;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  top: 50%;
+}
+
+.block__title:before {
+  transform: rotate(-40deg);
+  right: 0;
+}
+.block__title::after {
+  transform: rotate(40deg);
+  right: 12px;
+}
+
+.block__title.active::before,
+.block__title.active::after {
+  background-color: $color-primary;
+}
+
+.block__title.active::before {
+  transform: rotate(40deg);
+}
+
+.block__title.active::after {
+  transform: rotate(-40deg);
+}
+
+.block__text {
+  display: none;
+  padding: 1rem 3.5rem;
+  font-size: 1.6rem;
+  &.alt-color {
+    padding-left: 9.5rem;
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
+  }
+  @include respond(phone) {
+    padding: 1rem 0;
+  }
+}
